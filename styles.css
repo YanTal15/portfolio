@@ -1,0 +1,248 @@
+body{
+    font-family: 'Cormorant SC', serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #070707;
+}
+header{
+    background: white;
+    font-weight: 700;
+}
+.container{
+    width: 70%;
+    max-width: 950px;;
+    margin: 0 auto;
+}
+.nav{
+    align-items: center;
+    width: 70%;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between; 
+    height: 50px;
+    position: fixed;
+    background-color: #F6F6F6;
+    max-width: 950px;
+    align-content: center;
+    color: #828282;
+    top: 0;
+}
+
+.line{
+    display: none;
+    position: fixed;
+    width: 33px;
+    height: 4px;
+    top: 70px;
+    right: 30px;
+    background-color: #070707;
+}
+.line::before,
+.line::after{
+    content: "";
+    width: 33px;
+    height: 4px;
+    top: 7px;
+    background-color: #070707;
+    position: absolute;
+}
+.line::after{
+    top: -7px
+}
+.burger__off{
+    position: fixed;
+    width: 33px;
+    height: 26px;
+    top: 60px;
+    right: 30px;
+    background-color: white;
+    z-index: 5;
+    display: none;
+}
+.burger__off:hover{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: #828282;
+}
+.nav::after{
+    content: "";
+    position: absolute;
+    height: 22px;
+    top: 32px;
+    width: 100%;
+    border-bottom: 1px solid #828282;
+    max-width: 950px;
+    background-color: #F6F6F6;
+    display: none;
+}
+.home__about{
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+
+}
+.name{
+    width: 125px;
+    font-size: 48px;
+    line-height: 59px;
+    margin: auto auto 0 0;
+}
+.pro{
+    margin: auto auto 0 auto;
+    width: 160px;
+    padding-bottom: 10px;
+}
+.lang{
+    transform: rotate(-90deg);
+    margin: auto -27px 37px auto;
+    font-size: 16px;
+    line-height: 20px;
+}
+.avatar{
+    box-sizing: border-box;
+    background: url(./img/avatar.jpg) 0 0/100% no-repeat;
+    height: 20em;
+
+}
+.about,
+.portfolio{
+    background: #F6F6F6;
+    text-align: center;
+}
+
+.about__text,
+.skils__text{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 0 auto;
+    max-width: 490px;
+}
+.skills{
+    text-align: center;
+}
+h2{
+    font-size: 34px;
+    line-height: 42px;
+    text-align: center;
+}
+.hardskills{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-bottom: 110px;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
+
+.logo{
+    width: 170px;
+    height: 210px;
+}
+.logo p{
+    height: 30px;
+}
+.rait{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.portfolio h2{
+    padding-top: 110px;
+}
+.portfolio img{
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+.portfolio p{
+    text-align: center;
+    text-decoration-line: underline;
+    margin-bottom: 55px;
+}
+.portfolio p:last-child{
+    padding-bottom: 90px;
+}
+.contacts{
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+}
+.contacts p{
+    width: 275px;
+    margin: 0 auto;
+}
+.btn{
+    padding: 13px;
+    width: 185px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: #070707;
+    color: white;
+    border-radius: 50px ;
+    margin-top: 30px;
+    transition: 1s;
+}
+.btn:hover{
+    background: gray;
+    cursor: pointer;
+    color: #070707;
+}
+.contacts{
+    text-align: center;
+}
+.contacts img{
+    margin-top: 85px;
+    margin-bottom: 50px;
+}
+.contacts p:last-child{
+    width: 245px;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #828282;
+}
+span{
+   color: #828282; 
+}
+span:hover{
+    cursor: pointer;
+}
+.active__nav,
+.active__lang{
+    color: #070707;
+}
+
+.case{
+    width: 100%;
+    height: auto;
+}
+@media (max-width: 1000px) {
+    .container, .nav{width: 768px;}
+}
+@media (max-width: 767px){
+    .container, .nav{width: 100%;}
+}
+
+@media (max-width: 500px){
+    .nav{flex-direction: column; align-items: flex-start; background-color: #F6F6F6; height: 100%; font-size: 34px; display: none;  padding-left: 10px; margin-bottom: 300px;}
+    .nav__item{margin-top: 60px;}
+    .home__about, .hardskills{flex-direction: column;}
+    .name, .pro{margin: 0 auto 20px 20px;}
+    .logo {margin: 80px auto 0;}
+    .avatar{
+    background: url(./img/Avatar_full.jpg) 0 0/100% no-repeat;
+    height: 310px;}
+   .line{display: block;}
+   .burger__off{display: block;}
+   .home__about{
+       margin-top: 40px;
+   }
+   .contacts{width: 100%;}
+   .contacts img{width: 100%;}
+}
+.active{
+    display: flex;
+}
